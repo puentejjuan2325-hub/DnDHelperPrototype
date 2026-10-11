@@ -50,7 +50,6 @@ public abstract class User {
             String[] users = scan.nextLine().split(",");
             this.username = users[0];
             this.password = users[1];
-            scan.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
