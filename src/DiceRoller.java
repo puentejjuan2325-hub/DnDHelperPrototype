@@ -1,4 +1,4 @@
-import java.util.Locale;
+
 
 public class DiceRoller {
     private int diceValue;
@@ -11,7 +11,7 @@ public class DiceRoller {
         dice = dice.toUpperCase().trim();
         switch (dice){
             case "D20":
-                 diceValue = (int)(Math.random()*20) + 1;;
+                 diceValue = (int)(Math.random()*20) + 1;
                  break;
             case "D12":
                 diceValue = (int)(Math.random()*12) + 1;

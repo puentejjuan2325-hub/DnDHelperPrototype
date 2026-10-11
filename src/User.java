@@ -6,14 +6,14 @@ import java.util.Scanner;
 public abstract class User {
     private String username;
     private String password;
-    private DiceRoller diceRoller;
+    private final DiceRoller diceRoller;
 
     public User() {
         diceRoller = new DiceRoller();
     }
 
     public void createAccount(){
-        try(FileWriter file = new FileWriter(new File("logins.csv"));){
+        try(FileWriter file = new FileWriter("logins.csv");){
             Scanner scan = new Scanner(System.in);
             System.out.println("Please Enter a Username: ");
             file.write("" + scan.next());
